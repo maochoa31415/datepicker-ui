@@ -21,6 +21,7 @@
   --dp-main-color: #1e88e5;
   --dp-contrast-color: #e3f2fd;
   --dp-day-hightlight-color: #ffd180;
+  --dp-transition-time: 200ms ease;
   position: relative;
   display: flex;
   align-items: center;
@@ -29,6 +30,7 @@
   border-radius: var(--dp-border-radius);
   border-width: 2px;
   color: #424242;
+  transition: border-color var(--dp-transition-time);
 }
 
 .datepicker:has(input:focus) {
@@ -64,6 +66,9 @@
   border-radius:calc(var(--dp-border-radius) - 1px);
   color: var(--dp-main-color);
   cursor: pointer;
+  transition:
+    color var(--dp-transition-time),
+    background-color var(--dp-transition-time);
   appearance: none;
 }
 
@@ -117,6 +122,9 @@
   border-radius: 24px;
   background-color: transparent;
   cursor: pointer;
+  transition:
+    color var(--dp-transition-time),
+    background-color var(--dp-transition-time);
   appearance: none;
 }
 
@@ -154,6 +162,7 @@
   height: 30px;
   font-size: .8rem;
   background-color: #ededed;
+  transition: background-color var(--dp-transition-time);
 }
 
 .datepicker .picker .month-days .day:not(
